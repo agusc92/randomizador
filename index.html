@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-div">
+            <span class="titulo">Introduzca nuevo participante</span>
+
+            <form action="" class="game-form" id="form">
+                <div>
+                <label for="participante">Participante: </label>
+                <input type="text" id="part">
+                </div>
+                <span class="error-box blind">Error</span>
+                <button type="submit" class="boton-agregar"> Agregar</button>
+                
+                
+            </form>
+        </div>
+        <div class="game-div">
+            <span class="titulo">Participantes</span>
+            <div class="participantes-container">
+                <ul class="lista-participantes">
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <button id="botonSortear" class="boton-sortear">sortear</button>
+    </div>
+    <div>Resultado: <span id="resultado"></span></div>
+    <script src="main.js"></script>
+</body>
+</html>
