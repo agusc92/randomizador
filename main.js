@@ -5,7 +5,8 @@ let listaPart= document.querySelector(".lista-participantes");
 let errorBox = document.querySelector(".error-box");
 let botonSortear = document.querySelector("#botonSortear");
 let resultado = document.querySelector("#resultado");
-
+let resultadoContainer = document.querySelector(".resultado-container");
+let botonLimpiar = document.querySelector("#boton-limpiar");
 // let participanteAgregar = document.querySelector('')
 form.addEventListener('submit',(e)=>{
     
@@ -61,12 +62,28 @@ campoError=(mensaje)=>{
 }
 
 botonSortear.addEventListener("click",(event)=>{
+    if(participantes.length<=0){
+        return
+    }
     let num =0;
     let result ="";
     num = Math.floor(Math.random()*participantes.length)
     console.log(num);
     result = participantes[num];
-    resultado.innerHTML = result;
+    resultado.innerHTML = `<img src="media/papel-picado.png" alt="" class="img-resultado"> ${result} 
+                            <img src="media/papel-picado.png" alt="" class="img-resultado">
+                            `;
      
+    
+    botonLimpiar.classList.remove("blind");
+    botonLimpiar.addEventListener("click",()=>{limpiar()});
 })
+
+limpiar =()=>{
+        while (resultado.firstChild) {
+            resultado.removeChild(resultado.firstChild);
+        }
+    botonLimpiar.classList.add("blind");
+    
+}
 

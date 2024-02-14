@@ -13,8 +13,8 @@
 
             <form action="" class="game-form" id="form">
                 <div>
-                <label for="participante">Participante: </label>
-                <input type="text" id="part">
+                <label for="part">Participante: </label>
+                <input type="text" id="part" name="part">
                 </div>
                 <span class="error-box blind">Error</span>
                 <button type="submit" class="boton-agregar"> Agregar</button>
@@ -30,11 +30,24 @@
                 </ul>
             </div>
         </div>
-
+        
         
         <button id="botonSortear" class="boton-sortear">sortear</button>
+        <div class="resultado-container game-div">
+            <span class="titulo">
+                Ganador
+            </span>
+            
+            <span id="resultado" class="resultado">
+                
+
+            </span>
+            <button id="boton-limpiar" class="blind">limpiar</button>
+        </div>
     </div>
-    <div>Resultado: <span id="resultado"></span></div>
+    
+        
+
     <script src="main.js"></script>
 </body>
 </html>
